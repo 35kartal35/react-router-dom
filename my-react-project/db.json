@@ -1,0 +1,21 @@
+{
+  "students": [
+    {
+      "id": "1",
+            "name": "Mehmet",
+            "surname": "Ozdemir",
+            "studentNo": "1260",
+            "studentClass": "9/V",
+            "schoolName": "Hoca Ahmet Yesevi Lisesi"
+    },
+    {
+      "id": "2",
+            "name": "Ahmet",
+            "surname": "Ozdemir",
+            "studentNo": "1261",
+            "studentClass": "9/V",
+            "schoolName": "Şirinyer Lisesi"
+    }
+  ]
+ 
+}
