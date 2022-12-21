@@ -1,21 +1,20 @@
 {
-  "students": [
+  "students":[
     {
-      "id": "1",
-            "name": "Mehmet",
-            "surname": "Ozdemir",
-            "studentNo": "1260",
-            "studentClass": "9/V",
-            "schoolName": "Hoca Ahmet Yesevi Lisesi"
+        "id":"1",
+        "name":"Mehmet",
+        "surname":"Özdemir",
+        "studentNo":"592",
+        "studentClass":"5/B",
+        "schoolName":"Atatürk İ.Ö.O."
     },
     {
-      "id": "2",
-            "name": "Ahmet",
-            "surname": "Ozdemir",
-            "studentNo": "1261",
-            "studentClass": "9/V",
-            "schoolName": "Şirinyer Lisesi"
+        "id":"2",
+        "name":"Havva",
+        "surname":"Özdemir",
+        "studentNo":"101",
+        "studentClass":"5/C",
+        "schoolName":"Atatürk İ.Ö.O."
     }
-  ]
- 
+]
 }
