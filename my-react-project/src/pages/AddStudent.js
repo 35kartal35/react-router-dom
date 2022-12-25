@@ -1,4 +1,7 @@
+import axios from "axios";
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
+
 
 import Header from "../components/Header";
 
@@ -8,7 +11,7 @@ const AddStudent = () => {
   const [surname, setSurname] = useState("");
   const [studentClass, setStudentClass] = useState("");
   const [schoolName, setSchoolName] = useState("");
-
+  
   const handleSave = (event) => {
     event.preventDefault();
     //validation
@@ -19,10 +22,31 @@ const AddStudent = () => {
       studentClass === "" ||
       schoolName === ""
     ) {
-        alert("Bütün Alanları Doldurmak Zorunludur.")
+        alert("Bütün Alanlari Doldurmak Zorunludur.")
         return
     }
+    //unıque = benzersiz
+    const newStudent={
+      id:String(new Date().getTime()),
+      name:name,
+      surname:surname,
+      studentNo:studentNo,
+      studentClass:studentClass,
+      schoolName:schoolName
+    }
+    axios.post("http://localhost:3004/students",newStudent)
+    .then(res=>{
+      Navigate("/")
+    })
+    .catch(err=>{
+      console.log(err);
+      alert("kayıt işleminde bir sorun oluştu")
+    })
+
+    
   };
+
+
 
   return (
     <div>
@@ -37,7 +61,7 @@ const AddStudent = () => {
               type="number"
               className="form-control"
               id="studentNo"
-              placeholder="Ör: 100"
+              placeholder="Ör: 1636"
               value={studentNo}
               onChange={(event) => setStudentNo(event.target.value)}
             />

@@ -1,7 +1,20 @@
 import React from "react";
+import axios from "axios";
 
 const ListStudents = (props) => {
-  const { students } = props;
+  const { students,setStudents } = props;
+  const handleDelete=(student)=>{
+    
+    axios.delete(`http://localhost:3004/students/${student.id}`)
+    .then(res=>{
+      const filteredStudents=students.filter(item=>item.id !== student.id)
+      setStudents(filteredStudents)
+    })
+    .catch(err=>{
+      console.log(err);
+      alert("Silme esnasında bir sıkıntı oldu")
+    })
+  }
   return (
     <div className="container my-1">
       <table className="table table-striped">
@@ -24,6 +37,13 @@ const ListStudents = (props) => {
               <td>{student.surname}</td>
               <td>{student.studentClass}</td>
               <td>{student.schoolName}</td>
+              <td>
+                <div>
+                <button onClick={()=>handleDelete(student)} type="button" class="btn btn-danger btn-sm">SIL</button>
+                <button type="button" class="btn btn-primary btn-sm">DUZENLE</button>
+
+                </div>
+              </td>
             </tr>
           ))}
         </tbody>

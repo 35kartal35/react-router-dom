@@ -24,11 +24,15 @@ const Home=()=>{
         <div>
             <Header/>
             <div className="container mt-5 d-flex justify-content-end">
-                <button onClick={()=>navigate("/add-student")} className="btn btn-primary">
+                <button onClick={()=>navigate("/add-student",
+                {state:{students:students, setStudents:setStudents}})} 
+                className="btn btn-primary">
                     Yeni Öğrenci Ekle
                 </button>
             </div>
-            <ListStudents students={students} />
+            <ListStudents 
+            students={students}
+            setStudents={setStudents} />
         </div>
     )
 }
