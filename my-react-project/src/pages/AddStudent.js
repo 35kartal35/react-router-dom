@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 import Header from "../components/Header";
 
 const AddStudent = () => {
+  const navigate=useNavigate()
   const [studentNo, setStudentNo] = useState("");
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
@@ -36,11 +37,11 @@ const AddStudent = () => {
     }
     axios.post("http://localhost:3004/students",newStudent)
     .then(res=>{
-      Navigate("/")
+      navigate("/")
     })
     .catch(err=>{
       console.log(err);
-      alert("kayıt işleminde bir sorun oluştu")
+      alert("Kayıt işleminde bir sorun oluştu.")
     })
 
     

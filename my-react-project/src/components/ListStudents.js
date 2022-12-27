@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const ListStudents = (props) => {
   const { students,setStudents } = props;
@@ -40,7 +41,7 @@ const ListStudents = (props) => {
               <td>
                 <div>
                 <button onClick={()=>handleDelete(student)} type="button" class="btn btn-danger btn-sm">SIL</button>
-                <button type="button" class="btn btn-primary btn-sm">DUZENLE</button>
+                <Link to={`/edit-student/${student.id}`} type="button" class="btn btn-primary btn-sm">DUZENLE</Link>
 
                 </div>
               </td>

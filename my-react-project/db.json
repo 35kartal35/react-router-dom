@@ -1,28 +1,20 @@
 {
   "students": [
     {
-      "id": "1",
-      "name": "Mehmet",
-      "surname": "Özdemir",
-      "studentNo": "592",
-      "studentClass": "5/B",
-      "schoolName": "Atatürk İ.Ö.O."
-    },
-    {
-      "id": "2",
-      "name": "Havva",
-      "surname": "Özdemir",
-      "studentNo": "101",
-      "studentClass": "5/C",
-      "schoolName": "Atatürk İ.Ö.O."
-    },
-    {
       "id": "1671995881592",
       "name": "Ömer Said",
       "surname": "ÖZDEMİR",
-      "studentNo": "1300",
       "studentClass": "4/G",
-      "schoolName": "Şerif Tikveşli İlkokulu"
+      "schoolName": "Şerif Tikveşli İlkokulu",
+      "studentNo": "2100"
+    },
+    {
+      "id": "1671999251912",
+      "name": "Sueda",
+      "surname": "Özdemir",
+      "studentClass": "5/G",
+      "schoolName": "Atatürk Ortaokulu",
+      "studentNo": "1260"
     }
   ]
 }
